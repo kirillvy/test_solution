@@ -12,6 +12,7 @@ export default class Input extends React.Component {
 	[handleKeyPress](event) {
 		if (event.key === 'Enter') {
 			console.log(`Let's make youtube search for "${this.state.value}"`);
+			this.props.onSearch(this.state.value);
 		}
 	}
 	[handleOnChange](event) {
